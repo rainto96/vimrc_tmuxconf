@@ -4,7 +4,7 @@ filetype off                  " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-"Plugin 'vundle.vim'
+Plugin 'vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'The-NERD-tree'
