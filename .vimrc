@@ -4,8 +4,8 @@ filetype off                  " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Plugin 'vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'vundle.vim'
+"Plugin 'Valloric/YouCompleteMe'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'The-NERD-tree'
 Bundle 'The-NERD-Commenter'
@@ -22,9 +22,16 @@ let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
+"""""""""""""
+"HighLight I/O
+"""""""""""""
+":syn match Special  /system/
+":syn match Special /popen/
 
-nmap    w,  :vertical resize -3<CR>
-nmap    w.  :vertical resize +3<CR>
+:map    <F1>  :vertical resize -3<CR>
+:map    <F2>  :vertical resize +3<CR>
+nmap	j	jzz
+nmap	k	kzz
 
 
 """"""""""""""
@@ -38,7 +45,11 @@ set sw=4
 sy on
 :map<F3> 0I# <Esc>
 :map <F7> 0i#<Esc>
-:map <F8> i(<Esc>wwi)<Esc>
+":map <F8> i(<Esc>wwi)<Esc>
+:map <F9> 0i#<Space><Esc>$a<Space>#<Esc>yyppkkv$r#jjv$r#
+:map <F10> 0y$iprint<Space>'<Esc>$a={}'.format(<Esc>pa)<Esc>
+:map <F8> 0vf<Space>xilogging.info(<Esc>$a)<Esc>
+:map <F6> 0vf(xiprint<Space><Esc>$x
 
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
