@@ -2,13 +2,13 @@ set nocompatible              " be iMproved
 filetype off                  " required!
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"call vundle#rc()
 
 "Plugin 'vundle.vim'
 "Plugin 'Valloric/YouCompleteMe'
 "Bundle 'Valloric/YouCompleteMe'
-Bundle 'The-NERD-tree'
-Bundle 'The-NERD-Commenter'
+"Bundle 'The-NERD-tree'
+"Bundle 'The-NERD-Commenter'
 
 set autochdir
 let mapleader=","
